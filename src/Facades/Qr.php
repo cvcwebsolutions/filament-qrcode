@@ -184,11 +184,11 @@ class Qr extends Facade
                                 ->columns(['sm' => 2])
                                 ->visible(fn (Get $get) => $get('hasEyeColor')),
 
-                            FileUpload::make('logo')
-                                ->live()
-                                ->imageEditor()
-                                ->columnSpanFull()
-                                ->image(),
+//                            FileUpload::make('logo')
+//                                ->live()
+//                                ->imageEditor()
+//                                ->columnSpanFull()
+//                                ->image(),
                         ]),
 
                     Placeholder::make('preview')
