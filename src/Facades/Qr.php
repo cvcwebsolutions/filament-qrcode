@@ -51,6 +51,7 @@ class Qr extends Facade
     ): array {
         return [
             TextInput::make($statePath)
+                ->label(fn($statePath) => $statePath === 'qr-data' ? 'QR Data' : ucfirst(str_replace('-', ' ', $statePath)))
                 ->live(onBlur: true)
                 ->formatStateUsing(fn ($state) => $state ?? $defaultUrl)
                 ->visible($showUrl),
